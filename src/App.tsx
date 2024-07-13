@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import './App.css';
+import { useState } from 'react';
 import { compile } from "nepali-compiler";
 
 function App() {
