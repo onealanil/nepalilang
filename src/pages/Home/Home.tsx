@@ -1,5 +1,6 @@
 import Documentation from "../../components/Documentation";
 import Heading from "../../components/Header/Heading";
+import CodeEditor from "../playground/codeEditor/CodeEditor";
 
 
 
@@ -17,7 +18,7 @@ function Home(): JSX.Element {
        <Documentation/>   
         
       </div>
-      
+       <CodeEditor/>
       </div>
   );
 }

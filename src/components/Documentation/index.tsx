@@ -13,13 +13,9 @@ const features = [
         will be ignored.
       </>
     ),
-    code: `This will be ignored
+    code: `
+    nikaal "helloworld";
 
-hi bhai
-  // Write code here
-bye bhai
-
-This too
     `,
   },
   {
@@ -51,7 +47,7 @@ bye bhai
       </>
     ),
     code: `hi bhai
-    bhai ye hai a = 10;
+    rakh a = 10;
     bhai ye hai b = 10 + (15*20);
     bhai ye hai c = "two";
     bhai ye hai d = 'ok';
