@@ -1,4 +1,20 @@
+import Snippet from "../Documentation/Snippet";
+
 function Heading(): JSX.Element {
+  const code = ` 
+     nikaal "Hello World";
+     rakh a = 3;
+     
+     yedi (a < 3){
+       nikaal "a chai 3 bhanda syano chha";
+     } navaye (a == 3){
+       nikaal "a chai 3 chha"; 
+     } haina bhane {
+       nikaal "a chai 3 bhanda thulo chha"; 
+     }
+
+    `;
+
   return (
     <div className=" h-[100%] bg-bg flex w-[100%] py-[2rem]">
       {/* logo */}
@@ -6,7 +22,7 @@ function Heading(): JSX.Element {
         <img
           src="/assets/images/logo.png"
           alt="logo"
-          className="w-[30rem] h-[20rem]"
+          className="w-[30rem] h-[26rem]"
         />
       </div>
       {/* main heading  */}
@@ -25,23 +41,19 @@ function Heading(): JSX.Element {
               regularly to incorporate new features and improvements.
             </span>
             <div className="my-2">
-              <span className="py-2 px-2 rounded-md bg-gray-600 text-white font-opensans cursor-text">
+              <span className="py-2 px-2 rounded-md bg-[#1e1e1e] text-white font-opensans cursor-text">
                 ` npm i nepalilang `
               </span>
             </div>
-            <div className="mt-10">
+            <div className="mt-6">
               <span className="py-4 px-8 bg-green text-white font-bold rounded-md font-opensans cursor-pointer">
                 Try Now
               </span>
             </div>
           </div>
           {/* images  */}
-          <div>
-            <img
-              src="/assets/images/1.png"
-              alt="image1"
-              className="w-[30rem]"
-            />
+          <div className="w-[40%]">
+            <Snippet code={code} />
           </div>
         </div>
       </div>
