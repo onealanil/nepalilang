@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Snippet from "../Documentation/Snippet";
 
 function Heading(): JSX.Element {
@@ -16,7 +17,7 @@ function Heading(): JSX.Element {
     `;
 
   return (
-    <div className=" h-[100%] bg-bg flex w-[100%] py-[2rem]">
+    <div className=" h-[100%] bg-bg flex w-[100%] py-[2rem] ">
       {/* logo */}
       <div className="w-[30%] flex">
         <img
@@ -29,8 +30,14 @@ function Heading(): JSX.Element {
       <div className="w-[60%] flex flex-col gap-y-4">
         {/* menu bar  */}
         <div className="flex gap-x-10">
-          <span className="font-opensans font-bold cursor-pointer">Docs</span>
-          <span className="font-opensans font-bold cursor-pointer">Playground</span>
+          <Link to="/">
+            <span className="font-opensans font-bold cursor-pointer">Docs</span>
+          </Link>
+          <Link to="/playground">
+            <span className="font-opensans font-bold cursor-pointer">
+              Playground
+            </span>
+          </Link>
         </div>
         {/* main text  */}
         <div className="flex w-[100%] gap-x-5">

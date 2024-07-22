@@ -33,7 +33,6 @@ const Snippet = ({ code }: { code: string }) => {
             padding-left: 0;
             border-left: 1px solid #404040;
             margin-left: 0;
-            background: yellow;
           }
       `}</style>
       <div className="bg-[#1e1e1e] text-[#d4d4d4] py-2 px-2 font-mono text-sm">

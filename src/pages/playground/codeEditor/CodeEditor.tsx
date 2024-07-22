@@ -4,11 +4,8 @@ import { highlight } from 'prismjs';
 import { nepaliLangSyntax } from '../syntax/Syntax';
 import 'prismjs/themes/prism-tomorrow.css';
 
-const CodeEditor = () => {
-  const [code, setCode] = useState(
-    `yedi (x > 5) {\n  nikaal("X is greater than 5");\n} haina bhane {\n  nikaal("X is not greater than 5");\n}`
-  );
-
+const CodeEditor = ({code, setCode}: any) => {
+ 
   const highlightWithLineNumbers = (input: string) => {
     const highlightedCode = highlight(input, nepaliLangSyntax, "nepaliLang");
     const lines = highlightedCode.split("\n");
@@ -82,7 +79,7 @@ const CodeEditor = () => {
             backgroundColor: '#1e1e1e',
             color: '#d4d4d4',
           }}
-          className="min-h-[300px] border border-gray-700 rounded overflow-auto"
+          className="min-h-[400px] border border-gray-700 rounded overflow-auto"
           textareaClassName="prism-editor__textarea"
           preClassName="prism-editor__editor"
         />
