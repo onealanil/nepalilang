@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Snippet from "../Documentation/Snippet";
+import { FaGithub } from "react-icons/fa";
 
 function Heading(): JSX.Element {
   const code = ` 
@@ -53,9 +54,20 @@ function Heading(): JSX.Element {
               </span>
             </div>
             <div className="mt-6">
-              <span className="py-4 px-8 bg-green text-white font-bold rounded-md font-opensans cursor-pointer">
-                Try Now
-              </span>
+              <Link to="/playground">
+                <span className="py-4 px-8 bg-green text-white font-bold rounded-md font-opensans cursor-pointer">
+                  Try Now
+                </span>
+              </Link>
+            </div>
+            <div className="mt-6 flex gap-x-3">
+              <FaGithub size={20} />
+              <a
+                href="https://github.com/onealanil/nepalilang"
+                className="font-opensans font-bold cursor-pointer"
+              >
+                Github
+              </a>
             </div>
           </div>
           {/* images  */}

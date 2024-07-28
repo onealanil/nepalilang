@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Snippet from "../Documentation/Snippet";
+import { FaGithub } from "react-icons/fa";
 
 function MobileHeader(): JSX.Element {
   const code = ` 
@@ -16,7 +17,7 @@ function MobileHeader(): JSX.Element {
     `;
 
   return (
-    <div className="min-h-screen bg-bg flex flex-col md:flex-row w-full p-4 md:p-8">
+    <div className="bg-bg flex flex-col md:flex-row w-full p-4 md:p-8">
       {/* logo */}
       <div className="w-full flex justify-center md:justify-start mb-6 mt-[2rem]">
         <img
@@ -52,9 +53,20 @@ function MobileHeader(): JSX.Element {
               </span>
             </div>
             <div className="mt-2 flex justify-center md:justify-start">
-              <span className="py-4 px-8 bg-green text-white font-bold rounded-md font-opensans cursor-pointer">
-                Try Now
-              </span>
+              <Link to="/playground">
+                <span className="py-4 px-8 bg-green text-white font-bold rounded-md font-opensans cursor-pointer">
+                  Try Now
+                </span>
+              </Link>
+            </div>
+            <div className="mt-2 flex justify-center gap-x-3">
+              <FaGithub size={20} />
+              <a
+                href="https://github.com/onealanil/nepalilang"
+                className="font-opensans font-bold cursor-pointer"
+              >
+                Github
+              </a>
             </div>
           </div>
           {/* code snippet  */}

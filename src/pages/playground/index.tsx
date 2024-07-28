@@ -2,12 +2,14 @@ import React, { useState } from "react";
 import Heading from "../../components/Header/Heading";
 import CodeEditor from "./codeEditor/CodeEditor";
 import { compile } from "nepali-compiler";
+import MobileHeader from "../../components/Header/MobileHeader";
+import Bottom from "../../components/Header/Bottom";
 
 const Playground = () => {
   const [output, setOutput] = useState("");
   const [error, setError] = useState("");
   const [code, setCode] = useState(
-    `rakh x = 2; \nyedi (x > 5) {\n  nikaal("X is greater than 5");\n} haina bhane {\n  nikaal("X is not greater than 5");\n}`
+    `rakh x = 2; \nyedi (x > 5) {\n  nikaal("X chai 5 bhanda thulo chha!");\n} haina bhane {\n  nikaal("X chai 5 bhanda syano chha!");\n}`
   );
 
   const syntaxDefinition = [
@@ -66,12 +68,15 @@ const Playground = () => {
   };
 
   return (
-    <div className="w-screen flex flex-col items-center justify-center h-full">
-      <div>
+    <div className="w-screen md:flex md:flex-col items-center justify-center h-[100%]">
+      <div className="hidden md:block">
         <Heading />
       </div>
-      <div className="flex w-4/5 my-5 pb-60">
-        <div className="w-4/5">
+      <div className="md:hidden block">
+        <MobileHeader/>
+        </div>
+      <div className="flex flex-col items-center justify-center md:flex-row md:w-4/5 my-5 pb-60">
+        <div className="w-[90%] md:w-4/5">
           <div className="flex justify-between items-center mb-2">
             <h2 className="text-xl font-bold">Playground</h2>
             <div>
@@ -113,6 +118,8 @@ const Playground = () => {
           </table>
         </div>
       </div>
+      {/* bottom  */}
+      <Bottom/>
     </div>
   );
 };

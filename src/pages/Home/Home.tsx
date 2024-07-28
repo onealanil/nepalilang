@@ -1,4 +1,5 @@
 import Documentation from "../../components/Documentation";
+import Bottom from "../../components/Header/Bottom";
 import Heading from "../../components/Header/Heading";
 import MobileHeader from "../../components/Header/MobileHeader";
 
@@ -17,6 +18,9 @@ function Home(): JSX.Element {
       {/* Documentation  */}
       <div>
         <Documentation />
+      </div>
+      <div className="w-[100%] flex items-center justify-center">
+      <Bottom/>
       </div>
     </div>
   );

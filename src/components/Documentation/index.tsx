@@ -187,7 +187,7 @@ const supports = [
 export default function Documentation() {
   return (
     <div>
-      <div className="max-w-2xl mx-auto py-24 px-4 grid items-center grid-cols-1 gap-y-16 gap-x-8 sm:px-6 sm:py-32 lg:max-w-7xl lg:px-8">
+      <div className="max-w-2xl mx-auto md:py-10 px-4 grid items-center grid-cols-1 gap-y-16 gap-x-8 sm:px-6 sm:py-32 lg:max-w-7xl lg:px-8">
         <div>
           <h2 className="text-3xl font-extrabold tracking-tight text-black sm:text-4xl">
             Documentation
