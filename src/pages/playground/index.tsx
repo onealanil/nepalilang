@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Heading from "../../components/Header/Heading";
 import CodeEditor from "./codeEditor/CodeEditor";
-import { compile } from "nepali-compiler";
+import { resetCompilerState, compile } from "nepali-compiler";
 import MobileHeader from "../../components/Header/MobileHeader";
 import Bottom from "../../components/Header/Bottom";
 
@@ -32,24 +32,18 @@ const Playground = () => {
     setError(""); // Clear any previous errors
     setOutput(""); // Clear previous output
 
-    console.log(code);
-
     try {
+      resetCompilerState(); // Reset compiler state before compiling
       const result = compile(code);
-      console.log("Compilation result:", result);
 
       if (result === undefined) {
-        setError(
-          "Compilation result is undefined. Check the compiler implementation."
-        );
+        setError("Compilation result is undefined. Check the compiler implementation.");
         return;
       }
 
       if (typeof result === "object" && result !== null) {
-        if ("output" in result && "result" in result) {
-          // This is the expected structure from your compile function
-          setOutput(result.output);
-          console.log("Evaluation result:", result.result);
+        if ("result" in result) {
+          setOutput(JSON.stringify(result.result.value, null, 2));
         } else {
           setOutput(JSON.stringify(result, null, 2));
         }
@@ -73,8 +67,8 @@ const Playground = () => {
         <Heading />
       </div>
       <div className="md:hidden block">
-        <MobileHeader/>
-        </div>
+        <MobileHeader />
+      </div>
       <div className="flex flex-col items-center justify-center md:flex-row md:w-4/5 my-5 pb-60">
         <div className="w-[90%] md:w-4/5">
           <div className="flex justify-between items-center mb-2">
@@ -119,7 +113,7 @@ const Playground = () => {
         </div>
       </div>
       {/* bottom  */}
-      <Bottom/>
+      <Bottom />
     </div>
   );
 };
