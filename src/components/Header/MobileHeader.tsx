@@ -48,8 +48,11 @@ function MobileHeader(): JSX.Element {
               regularly to incorporate new features and improvements.
             </span>
             <div className="my-2 flex justify-center md:justify-start">
-              <span className="py-2 px-2 rounded-md bg-[#1e1e1e] text-white font-opensans cursor-text break-all">
+              {/* <span className="py-2 px-2 rounded-md bg-[#1e1e1e] text-white font-opensans cursor-text break-all">
                 npm i nepalilang
+              </span> */}
+                <span className="py-2 px-2 rounded-md bg-[#1e1e1e] text-red-500 font-opensans cursor-text">
+                ` npm package available soon`
               </span>
             </div>
             <div className="mt-2 flex justify-center md:justify-start">
