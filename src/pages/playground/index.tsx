@@ -34,27 +34,31 @@ const Playground = () => {
 
     try {
       resetCompilerState(); // Reset compiler state before compiling
-      const result = compile(code);
+      const { results, outputs } = compile(code);
 
-      if (result === undefined) {
-        setError("Compilation result is undefined. Check the compiler implementation.");
-        return;
+      let fullOutput = "";
+
+      // Add all captured outputs
+      if (outputs.length > 0) {
+        fullOutput += outputs.join("\n") + "\n";
       }
 
-      if (typeof result === "object" && result !== null) {
-        if ("result" in result) {
-          setOutput(JSON.stringify(result.result.value, null, 2));
-        } else {
-          setOutput(JSON.stringify(result, null, 2));
-        }
-      } else {
-        setOutput(String(result));
+      // Add the final result if it's not null and not already included in the outputs
+      // if (results && results.type !== "null" && !outputs.includes(String(results.value))) {
+      //   fullOutput += "Final Result: " + JSON.stringify(results.value, null, 2);
+      // }
+
+      if (fullOutput.trim() === "") {
+        fullOutput = "No output generated.";
       }
+
+      setOutput(fullOutput);
     } catch (error: any) {
       console.error("Compilation error:", error);
       setError(error.message || "An unknown error occurred");
     }
   };
+
 
   const handleClear = () => {
     // Implement the logic to clear the code editor
