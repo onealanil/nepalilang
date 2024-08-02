@@ -66,7 +66,7 @@ function Heading(): JSX.Element {
             <div className="mt-6 flex gap-x-3">
               <FaGithub size={20} />
               <a
-                href="https://github.com/onealanil/nepalilang"
+                href="https://github.com/onealanil/Dotnep-nepali-compiler"
                 className="font-opensans font-bold cursor-pointer"
               >
                 Github

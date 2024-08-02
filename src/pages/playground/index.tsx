@@ -9,7 +9,7 @@ const Playground = () => {
   const [output, setOutput] = useState("");
   const [error, setError] = useState("");
   const [code, setCode] = useState(
-    `rakh x = 2; \nyedi (x > 5) {\n  nikaal("X chai 5 bhanda thulo chha!");\n} haina bhane {\n  nikaal("X chai 5 bhanda syano chha!");\n}`
+    `rakh x = 2; \nyedi (x > 5) {\n  nikaal("X chai 5 bhanda thulo chha!");\n} navaye (x == 3) {\n  nikaal "X ko value 3 ho"; \n} haina bhane {\n  nikaal("X chai 5 bhanda syano chha!");\n}`
   );
 
   const syntaxDefinition = [

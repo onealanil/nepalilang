@@ -29,6 +29,7 @@ const features = [
     rakh e;
     e = 10;
     e = e + 10;
+    nikaal e;
     `,
   },
   {
@@ -43,7 +44,7 @@ const features = [
     code: `
     rakh a = 10;
     rakh b = 10 + (15*20);
-    rakh d = 'ok';
+    rakh d = "ok";
     rakh c = "two";
     rakh f = sahi;
     rakh g = galat;
@@ -108,15 +109,16 @@ const features = [
     ),
     code: `
     rakh i = 0;
+    nikaal "10 bhanda syano even number haru: ";
     jaba samma (i < 10) {
-      yedi (i == 5) {
-        bhayo; //break
-      }
-      yedi (i % 2 == 0) {
-        jaari raakh; // Continue
-      }
-      nikaal i; // Print i 
       i = i + 1;
+      yedi (i == 10) {
+        bhayo; 
+      }
+      yedi (i % 2 != 0) {
+        jaari rakh; 
+      }
+      nikaal i;
     }
     `,
   },  
@@ -126,7 +128,7 @@ const features = [
       <>
         Functions which return a value can be declared using{" "}
         <code className="font-bold">'kaam ra firta'</code>. You can call the function
-        using the function name.
+        using the function name. It is necessary to store the returned value in a variable.
       </>
     ),
     code: `
@@ -134,7 +136,6 @@ const features = [
       rakh c = a + b;
       firta c;
     }
-    // It is necessary to store the returned value in a variable
     rakh x = add(5, 10); 
     nikaal x;
     `
@@ -190,8 +191,9 @@ export default function Documentation() {
       <div className="max-w-2xl mx-auto md:py-10 px-4 grid items-center grid-cols-1 gap-y-16 gap-x-8 sm:px-6 sm:py-32 lg:max-w-7xl lg:px-8">
         <div>
           <h2 className="text-3xl font-extrabold tracking-tight text-black sm:text-4xl">
-            Documentation
+            Documentation 
           </h2>
+          <span className="text-md text-red-500">(Testing Version.)</span>
           <p className="mt-4 text-gray-600">
             Inspired by Bhailang and the flexibility of TypeScript, I aim to
             create a Nepali language-based syntax.
