@@ -62,8 +62,8 @@ const Playground = () => {
 
 
   const handleClear = () => {
-    // Implement the logic to clear the code editor
     setOutput("");
+    setCode("");
   };
 
   return (
