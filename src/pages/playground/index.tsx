@@ -4,6 +4,7 @@ import CodeEditor from "./codeEditor/CodeEditor";
 import { resetCompilerState, compile } from "nepali-compiler";
 import MobileHeader from "../../components/Header/MobileHeader";
 import Bottom from "../../components/Header/Bottom";
+import {Helmet} from "react-helmet";
 
 const Playground = () => {
   const [output, setOutput] = useState("");
@@ -67,6 +68,11 @@ const Playground = () => {
 
   return (
     <div className="w-screen md:flex md:flex-col items-center justify-center h-[100%]">
+       <Helmet>
+        <title>Playground | NepaliLang Compiler</title>
+        <meta name="description" content="Welcome to NepaliLang, the powerful and user-friendly Nepali language compiler and interpreter. Start writing and running Nepali code today." />
+        <link rel="canonical" href="https://dotnep.xyz" />
+      </Helmet>
       <div className="hidden md:block">
         <Heading />
       </div>
