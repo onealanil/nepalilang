@@ -104,7 +104,7 @@ const features = [
         <code className="font-bold">'galat'</code>, the loop stops executing and
         control passes to the statement following the loop. Use{" "}
         <code className="font-bold">'bhayo'</code> to break the loop and{" "}
-        <code className="font-bold">'jaari raakh'</code> to continue within the loop.
+        <code className="font-bold">'jaari rakh'</code> to continue within the loop.
       </>
     ),
     code: `
