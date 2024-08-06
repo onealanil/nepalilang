@@ -99,7 +99,7 @@ const Playground = () => {
             </div>
           </div>
           <CodeEditor code={code} setCode={setCode} />
-          <div className="mt-4 p-4 bg-gray-100 rounded">
+          <div className="mt-4 p-4 bg-gray-100 rounded my-10 md:my-0">
             {error && <div style={{ color: "red" }}>{error}</div>}
             <h3 className="font-bold mb-2">Output:</h3>
             <pre>{output}</pre>
