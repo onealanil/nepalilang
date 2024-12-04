@@ -48,9 +48,9 @@ function Heading(): JSX.Element {
               TypeScript. This is the first version, and it will be updated
               regularly to incorporate new features and improvements.
             </span>
-            <div className="my-2">
+            <div className="my-2 flex flex-col gap-y-1">
               <span className="py-2 px-2 rounded-md bg-[#1e1e1e] text-white font-opensans cursor-text">
-                ` npm i -g nepalilang `
+                `npm install -g nepali-compiler `
               </span>
               <a
                 href="https://www.npmjs.com/package/nepali-compiler?activeTab=readme"
