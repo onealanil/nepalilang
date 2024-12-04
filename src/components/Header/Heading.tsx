@@ -54,9 +54,9 @@ function Heading(): JSX.Element {
               </span>
               <a
                 href="https://www.npmjs.com/package/nepali-compiler?activeTab=readme"
-                className="font-opensans font-bold cursor-pointer"
+                className="font-opensans font-semibold cursor-pointer"
               >
-                View Process
+                View
               </a>
             </div>
             <div className="mt-6">
