@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Snippet from "../Documentation/Snippet";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaNpm } from "react-icons/fa";
 
 function Heading(): JSX.Element {
   const code = ` 
@@ -48,16 +48,10 @@ function Heading(): JSX.Element {
               TypeScript. This is the first version, and it will be updated
               regularly to incorporate new features and improvements.
             </span>
-            <div className="my-2 flex flex-col gap-y-1">
+            <div className="my-2">
               <span className="py-2 px-2 rounded-md bg-[#1e1e1e] text-white font-opensans cursor-text">
                 `npm install -g nepali-compiler `
               </span>
-              <a
-                href="https://www.npmjs.com/package/nepali-compiler?activeTab=readme"
-                className="font-opensans font-semibold cursor-pointer"
-              >
-                View
-              </a>
             </div>
             <div className="mt-6">
               <Link to="/playground">
@@ -66,14 +60,25 @@ function Heading(): JSX.Element {
                 </span>
               </Link>
             </div>
-            <div className="mt-6 flex gap-x-3">
+            <div className="mt-6 flex flex-col gap-y-1">
+              <div className="flex gap-x-3">
               <FaGithub size={20} />
               <a
                 href="https://github.com/onealanil/Dotnep-nepali-compiler"
                 className="font-opensans font-bold cursor-pointer"
-              >
+                >
                 Github
               </a>
+                </div>
+                <div className="flex gap-x-3">
+              <FaNpm size={20}/>
+              <a
+                href="https://www.npmjs.com/package/nepali-compiler?activeTab=readme"
+                className="font-opensans font-semibold cursor-pointer"
+              >
+                npm
+              </a>
+              </div>
             </div>
           </div>
           {/* images  */}
